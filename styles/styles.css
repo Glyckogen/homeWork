@@ -1,513 +1,724 @@
 @font-face {
-  font-family: SocialIco;
-  src: url("../fonts/Socialico.ttf");
+  font-family: "Open Sans Regular";
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url(../fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+.insideWrapMixin {
+  width: 1200px;
+  margin: 0 auto;
+}
+.buttonMixin {
+  background-color: #1a9bdc;
+  box-shadow: -4px 11px 40px 0 rgba(0, 1, 1, 0.2);
+  width: 166px;
+  height: 47px;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 18.25px;
+}
+.buttonMixin:hover {
+  background-color: #37c3a8;
+  cursor: pointer;
 }
 html,
 body {
-  min-height: 100%;
+  height: 100%;
+  width: 100%;
 }
 body {
   margin: 0;
-  background: #ccc;
-  font-family: Arial, sans-serif;
-}
-@media all and (min-width: 0) and (max-width: 767px) {
-  .container {
-    padding: 0;
-  }
-}
-.navigation {
-  background: #FFF;
-  padding: 8px;
-  width: 4%;
-  margin-left: 48%;
-}
-.pageHeader {
-  background: #445161;
-  padding: 50px;
-}
-@media all and (min-width: 0) and (max-width: 767px) {
-  .pageHeader {
-    padding: 15px;
-  }
-}
-.pageHeader:after {
-  content: '';
-  clear: both;
-  display: block;
-}
-.pageHeader .productName {
-  margin-top: 0;
-  color: #ffffff;
-  font-size: 60px;
-  font-weight: 400;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-}
-@media (max-width: 479px) {
-  .pageHeader .productName {
-    font-size: 46px;
-  }
-}
-.pageHeader .headerProductImg {
-  width: 100%;
-}
-.pageHeader .headerList {
-  list-style: inside url("../images/check_icon.png");
-  padding-left: 0;
-  color: #ffffff;
-  font-size: 20px;
-  line-height: 36px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-}
-.aboutProduct {
-  padding: 50px;
-}
-@media all and (min-width: 0) and (max-width: 767px) {
-  .aboutProduct {
-    padding: 15px;
-  }
-}
-.aboutProduct:after {
-  content: '';
-  clear: both;
-  display: block;
-}
-.aboutProduct .aboutProductHeader {
-  color: #445161;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 36px;
-  margin: 0 0 30px;
-}
-@media all and (min-width: 0) and (max-width: 767px) {
-  .aboutProduct .aboutProductHeader {
-    margin-bottom: 15px;
-  }
-}
-.aboutProduct .aboutDesc2 {
-  margin-top: 15px;
-}
-.aboutProduct .aboutProductImg {
-  width: 100%;
-}
-.aboutProduct .aboutDesc1,
-.aboutProduct .aboutDesc2 {
-  color: #445161;
-  font-size: 16px;
-  line-height: 24px;
-}
-.dignityAndPluses {
-  padding: 50px;
-  background: #f5f5f5;
-}
-@media all and (min-width: 0) and (max-width: 767px) {
-  .dignityAndPluses {
-    padding: 15px;
-  }
-}
-.dignityAndPluses:after {
-  content: '';
-  clear: both;
-  display: block;
-}
-.dignityAndPluses .dignityAndPlusesHeader {
-  color: #445161;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 36px;
-  margin: 0 0 30px;
-  text-align: center;
-}
-.dignityAndPluses .pluses {
-  color: #445161;
-  font-size: 16px;
-  line-height: 24px;
-}
-.dignityAndPluses .pluses:after {
-  clear: both;
-  display: block;
-  content: '';
-}
-@media (min-width: 992px) {
-  .dignityAndPluses .pluses div[class^="col-"]:not( :nth-child(-n+2)) {
-    margin-top: 15px;
-  }
-}
-@media all and (min-width: 0) and (max-width: 991px) {
-  .dignityAndPluses .pluses div[class^="col-"]:not(:first-child) {
-    margin-top: 15px;
-  }
-}
-@media (max-width: 479px) {
-  .dignityAndPluses .pluses div[class^="col-"]:last-child .plus {
-    background: none;
-    padding-bottom: 0;
-  }
-}
-.dignityAndPluses .pluses .plus {
-  background: url("../images/plus_icon.gif") no-repeat left 5px;
-  padding-left: 40px;
+  padding: 20px;
   box-sizing: border-box;
-  text-align: justify;
 }
-@media (max-width: 479px) {
-  .dignityAndPluses .pluses .plus {
-    background-position: center bottom;
-    padding-bottom: 40px;
-    padding-left: 0;
-    text-align: left;
-  }
-}
-.screenshots {
-  padding: 50px;
-}
-@media all and (min-width: 0) and (max-width: 767px) {
-  .screenshots {
-    padding: 15px;
-  }
-}
-.screenshots:after {
-  content: '';
-  clear: both;
-  display: block;
-}
-.screenshots .screenshotsHeader {
-  color: #445161;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 36px;
-  margin: 0 0 30px;
-  text-align: center;
-}
-@media all and (min-width: 0) and (max-width: 991px) {
-  .screenshots [class^="col"]:not(:first-child) {
-    margin-top: 15px;
-  }
-}
-@media (min-width: 992px) {
-  .screenshots [class^="col"]:nth-child(n+3) {
-    margin-top: 15px;
-  }
-}
-.screenshots .screenshotUnit {
-  color: #445161;
-}
-.screenshots .screenshotUnit:after {
-  display: block;
-  clear: both;
-  content: '';
-}
-.screenshots .screenshotUnit .screenshotImg {
+body header {
+  width: 100%;
   float: left;
-  margin-right: 15px;
 }
-@media (max-width: 479px) {
-  .screenshots .screenshotUnit .screenshotImg {
-    float: none;
-  }
+body header .headerInside {
+  width: 1200px;
+  margin: 0 auto;
 }
-.screenshots .screenshotUnit .screenshotUnitHead {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 30px;
-  margin: 0;
+body header .headerInside .logoAndContacts {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.screenshots .screenshotUnit .screenshotDesc {
-  font-size: 16px;
-  line-height: 24px;
-  text-align: justify;
-}
-.reviews {
-  padding: 50px;
-  background: #f5f5f5;
-}
-@media all and (min-width: 0) and (max-width: 767px) {
-  .reviews {
-    padding: 15px;
-  }
-}
-.reviews:after {
-  content: '';
-  clear: both;
+body header .headerInside .logoAndContacts .logo {
   display: block;
 }
-.reviews .reviewsHeader {
-  color: #445161;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 36px;
-  margin: 0 0 30px;
-  text-align: center;
-}
-@media all and (min-width: 0) and (max-width: 991px) {
-  .reviews .reviewUnitWrap:not(:first-child) {
-    margin-top: 15px;
-  }
-}
-@media (min-width: 992px) {
-  .reviews .reviewUnitWrap:nth-child(n+3) {
-    margin-top: 15px;
-  }
-}
-.reviews .reviewUnit:after {
-  clear: both;
-  display: block;
-  content: '';
-}
-.reviews .reviewUnit .reviewImg {
-  border-radius: 50%;
-  float: right;
-}
-@media all and (min-width: 0) and (max-width: 991px) {
-  .reviews .reviewUnit .reviewImg {
-    display: block;
-    float: none;
-    margin: 0 auto 15px auto;
-  }
-}
-.reviews .reviewUnit .reviewWrap:after {
-  clear: both;
-  display: block;
-  content: '';
-}
-@media all and (min-width: 0) and (max-width: 991px) {
-  .reviews .reviewUnit .reviewWrap {
-    margin-top: 30px;
-  }
-}
-.reviews .reviewUnit .reviewWrap .review {
-  position: relative;
-  color: #445161;
-  font-size: 14px;
-  font-style: italic;
-  line-height: 18px;
-  float: right;
-  background: #ebebeb;
-  padding: 16px;
+body header .headerInside .logoAndContacts .contactUnitWrap {
+  padding-left: 60px;
+  height: 51px;
+  font-family: "Open Sans Regular", sans-serif;
+  font-size: 15px;
+  color: #6a6a6a;
+  padding-top: 5px;
   box-sizing: border-box;
-  border-radius: 4px;
 }
-.reviews .reviewUnit .reviewWrap .review::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: -10px;
-  top: 27px;
-  background: #ebebeb;
-  transform: rotate(45deg);
+body header .headerInside .logoAndContacts .contactUnitWrap .topLine {
+  font-family: "Open Sans Bold", sans-serif;
 }
-@media all and (min-width: 0) and (max-width: 991px) {
-  .reviews .reviewUnit .reviewWrap .review::before {
-    top: -10px;
-    left: calc(50% - 10px);
-  }
+body header .headerInside .logoAndContacts .contactWorkWrap {
+  background: url(../images/workTime.png) no-repeat left center;
 }
-.reviews .reviewUnit .reviewWrap .review .reviewAuthor {
-  color: #989898;
-  font-size: 14px;
-  line-height: 18px;
+body header .headerInside .logoAndContacts .mailUsWrap {
+  background: url(../images/mailUs.png) no-repeat left center;
 }
-.buyItNow {
-  padding: 50px;
+body header .headerInside .logoAndContacts .callUsWrap {
+  background: url(../images/callUs.png) no-repeat left center;
 }
-@media all and (min-width: 0) and (max-width: 767px) {
-  .buyItNow {
-    padding: 15px;
-  }
+body header .headerInside .divider {
+  background-color: rgba(194, 194, 194, 0.31);
+  height: 2px;
+  margin-top: 20px;
 }
-.buyItNow:after {
-  content: '';
-  clear: both;
-  display: block;
+body header .headerInside .navAndSocials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.buyItNow .buyItNowHeader {
-  color: #445161;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 36px;
-  margin: 0 0 30px;
+body header .headerInside .navAndSocials .mainNav a {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 20px;
+  color: #6c6c6c;
+  text-decoration: none;
+  padding: 0 20px;
+  display: inline-block;
+  height: 90px;
+  line-height: 90px;
+}
+body header .headerInside .navAndSocials .mainNav a:hover {
+  color: #262626;
+}
+body header .headerInside .navAndSocials .mainNav a:first-child {
+  padding-left: 0;
+}
+body header .headerInside .navAndSocials .mainNav a:last-child {
+  padding-right: 0;
+}
+body header .headerInside .navAndSocials .socials a {
+  text-decoration: none;
+  font-size: 23.34px;
+  color: #191919;
+  margin: 0 5px;
+  display: inline-block;
+  height: 90px;
+  line-height: 90px;
+}
+body header .headerInside .navAndSocials .socials a:hover {
+  color: #6a6a6a;
+}
+body header .headerInside .navAndSocials .socials a:first-child {
+  margin-left: 0;
+}
+body header .headerInside .navAndSocials .socials a:last-child {
+  margin-right: 0;
+}
+body .medicalCarePlan {
+  width: calc(100% + 40px);
+  float: left;
+  height: 640px;
+  background: url(../images/medicarePlan.jpg) no-repeat center center;
+  background-size: cover;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+body .medicalCarePlan .medicalPlanInside {
+  width: 1200px;
+  margin: 0 auto;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+body .medicalCarePlan .medicalPlanInside .medicalCareOffer {
   text-align: center;
+  color: #474747;
+  padding-left: 20px;
 }
-.buyItNow .buyUnits {
+body .medicalCarePlan .medicalPlanInside .medicalCareOffer .medicalCareHead {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 47.69px;
+}
+body .medicalCarePlan .medicalPlanInside .medicalCareOffer .medicalCareDesc {
+  font-family: "Open Sans Regular", sans-serif;
+  font-size: 17px;
+  margin-top: 37px;
+  margin-bottom: 42px;
+}
+body .medicalCarePlan .medicalPlanInside .medicalCareOffer button {
+  background-color: #1a9bdc;
+  box-shadow: -4px 11px 40px 0 rgba(0, 1, 1, 0.2);
+  width: 166px;
+  height: 47px;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 18.25px;
+}
+body .medicalCarePlan .medicalPlanInside .medicalCareOffer button:hover {
+  background-color: #37c3a8;
+  cursor: pointer;
+}
+body .benefits {
+  width: calc(100% + 40px);
+  float: left;
+  margin-left: -20px;
+  margin-right: -20px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#43b1d2+0,37c3a8+100 */
+  background: #43b1d2;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #43b1d2 0%, #37c3a8 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #43b1d2 0%, #37c3a8 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #43b1d2 0%, #37c3a8 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#43b1d2', endColorstr='#37c3a8', GradientType=1);
+  /* IE6-9 */
+}
+body .benefits .benefitsInside {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+}
+body .benefits .benefitsInside .benefitUnit {
+  padding: 60px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-@media (min-width: 992px) {
-  .buyItNow .buyUnits {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
+body .benefits .benefitsInside .benefitUnit .benefitIcon {
+  width: 75px;
+  height: 75px;
+  background-size: contain;
 }
-.buyItNow .buyUnits .buyUnit {
-  background: #445161;
-  border-radius: 4px;
-  border: 2px solid #445161;
+body .benefits .benefitsInside .benefitUnit .bestTreatment {
+  background: url(../images/bestTreatment.png) no-repeat center center;
 }
-@media all and (min-width: 0) and (max-width: 991px) {
-  .buyItNow .buyUnits .buyUnit:not(:last-child) {
-    margin-bottom: 30px;
-  }
+body .benefits .benefitsInside .benefitUnit .emergencyHelp {
+  background: url(../images/emergencyHelp.png) no-repeat center center;
 }
-@media (min-width: 992px) {
-  .buyItNow .buyUnits .buyUnit:not(:last-child) {
-    margin-right: 15px;
-  }
+body .benefits .benefitsInside .benefitUnit .medicalStaff {
+  background: url(../images/medicalStuff.png) no-repeat center center;
 }
-.buyItNow .buyUnits .buyUnit h2 {
-  padding: 17px;
-  box-sizing: border-box;
-  text-align: center;
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 30px;
-  margin: 0;
+body .benefits .benefitsInside .benefitUnit .qualifiedDoctors {
+  background: url(../images/qualifiedDoctors.png) no-repeat center center;
 }
-.buyItNow .buyUnits .buyUnit .buyUnitPrice {
-  text-align: center;
-  padding: 18px;
-  color: #445161;
-  background: #ffffff;
-  font-size: 40px;
-  line-height: 30px;
-}
-.buyItNow .buyUnits .buyUnit .buyUnitText {
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 24px;
-  padding: 20px;
-}
-.buyItNow .buyUnits .buyUnit .buyBtn {
-  border-radius: 4px;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 14px;
-  background: #ffffff;
-  color: #445161;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 18px;
-  display: block;
-  margin: 20px;
-  text-decoration: none;
-}
-.video2 {
-  background: #ccc;
-  margin-bottom: 50px;
-}
-.video2 video {
-  width: 100%;
-  height: auto;
-  object-position: center center;
-}
-footer {
-  padding: 50px;
-  background: #445161;
-}
-@media all and (min-width: 0) and (max-width: 767px) {
-  footer {
-    padding: 15px;
-  }
-}
-footer:after {
-  content: '';
-  clear: both;
-  display: block;
-}
-footer .contactsHeader {
-  color: #445161;
+body .benefits .benefitsInside .benefitUnit .benefitUnitHead {
+  font-family: "Montserrat Bold", sans-serif;
   font-size: 30px;
-  font-weight: 400;
-  line-height: 36px;
-  margin: 0 0 30px;
   color: #ffffff;
   text-align: center;
+  margin: 30px 0;
 }
-footer .contactsContent:after {
-  clear: both;
-  content: '';
-  display: block;
-}
-footer .contactsContent form input[type="text"],
-footer .contactsContent form textarea {
-  display: block;
-  width: 100%;
-  border-radius: 5px;
-  border: none;
-  margin-bottom: 21px;
-  padding: 7px 5px;
-  box-sizing: border-box;
-  color: #445161;
-  font-size: 16px;
-  line-height: 24px;
-  outline: none;
-}
-footer .contactsContent form textarea {
-  font-family: inherit;
-  min-height: 170px;
-}
-footer .contactsContent form input[type="submit"] {
-  border-radius: 5px;
-  background-color: #ffffff;
-  width: 140px;
-  height: 40px;
+body .benefits .benefitsInside .benefitUnit .benefitUnitDesc {
+  font-size: 14px;
+  font-family: "Open Sans Regular", sans-serif;
   text-align: center;
-  color: #445161;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  border: none;
-  display: block;
+  color: #ffffff;
+}
+body .whyChooseUs {
+  width: 100%;
+  float: left;
+}
+body .whyChooseUs .whyChooseUsHead {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 45px;
+  text-align: center;
+  color: #474747;
+  margin-top: 111px;
+  margin-bottom: 31px;
+}
+body .whyChooseUs .whyChooseUsDesc {
+  text-align: center;
+  font-family: "Open Sans Regular", sans-serif;
+  color: #6a6a6a;
+  margin-bottom: 25px;
+}
+body .whyChooseUs .whyChooseUsInside {
+  width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 337px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+}
+body .whyChooseUs .whyChooseUsInside .chooseUsInsideUnit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .whyChooseUs .whyChooseUsInside .chooseUsInsideUnit .chooseUsInsideHead {
+  padding-left: 95px;
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 30px;
+  color: #6c6c6c;
+  height: 75px;
+  line-height: 75px;
+}
+body .whyChooseUs .whyChooseUsInside .chooseUsInsideUnit .choose1 {
+  background: url(../images/choose1.png) no-repeat left center;
+}
+body .whyChooseUs .whyChooseUsInside .chooseUsInsideUnit .choose2 {
+  background: url(../images/choose2.png) no-repeat left center;
+}
+body .whyChooseUs .whyChooseUsInside .chooseUsInsideUnit .choose3 {
+  background: url(../images/choose3.png) no-repeat left center;
+}
+body .whyChooseUs .whyChooseUsInside .chooseUsInsideUnit .choose4 {
+  background: url(../images/choose4.png) no-repeat left center;
+}
+body .whyChooseUs .whyChooseUsInside .chooseUsInsideUnit .chooseUsInsideDesc {
+  font-family: "Open Sans Regular", sans-serif;
+  color: #6a6a6a;
+  font-size: 16px;
+  margin-top: 20px;
+}
+body .whyChooseUs .whyChooseUsInside .chooseUsDoctor {
+  background: url(../images/chooseUsDoctor.png) no-repeat center bottom;
+  height: 598px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  align-self: end;
+}
+body .achievements {
+  width: calc(100% + 40px);
+  float: left;
+  margin-left: -20px;
+  margin-right: -20px;
+  min-height: 792px;
+  background: url(../images/achievements.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body .achievements .achievementsInside {
+  width: 1200px;
+  margin: 0 auto;
+  min-height: inherit;
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+body .achievements .achievementsInside .achieveUnit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .achievements .achievementsInside .achieveUnit .achieveIcon {
+  width: 120px;
+  height: 120px;
+}
+body .achievements .achievementsInside .achieveUnit .happyCustomers {
+  background: url(../images/happyCustomers.png) no-repeat center center;
+}
+body .achievements .achievementsInside .achieveUnit .topHospitality {
+  background: url(../images/topHospitality.png) no-repeat center center;
+}
+body .achievements .achievementsInside .achieveUnit .innovateApproach {
+  background: url(../images/innovateApproach.png) no-repeat center center;
+}
+body .achievements .achievementsInside .achieveUnit .lungReplacement {
+  background: url(../images/lungReplacement.png) no-repeat center center;
+}
+body .achievements .achievementsInside .achieveUnit .achieveCounter {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 27px;
+  margin-bottom: 27px;
+}
+body .achievements .achievementsInside .achieveUnit .achieveDivider {
+  width: 84px;
+  height: 6px;
+  background-color: #ffffff;
+  margin-bottom: 27px;
+}
+body .achievements .achievementsInside .achieveUnit .achieveText {
+  font-family: "Montserrat Medium", sans-serif;
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+}
+body .worksAndCreative {
+  width: 100%;
+  float: left;
+}
+body .worksAndCreative .worksAndCreativeInside {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding-top: 100px;
+  grid-template-areas: "worksHead worksHead ourCreativeHead" "worksDesc worksDesc creativeDesc" "worksUnit1 worksUnit2 heartTreatment" "worksData1 worksData2 heartTreatmentPoints" "readMoreWrap readMoreWrap .";
+}
+body .worksAndCreative .worksAndCreativeInside .worksHead {
+  grid-area: worksHead;
+}
+body .worksAndCreative .worksAndCreativeInside .worksHead,
+body .worksAndCreative .worksAndCreativeInside .ourCreativeHead {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 45px;
+  color: #474747;
+}
+body .worksAndCreative .worksAndCreativeInside .worksDesc {
+  grid-area: worksDesc;
+}
+body .worksAndCreative .worksAndCreativeInside .ourCreativeHead {
+  grid-area: ourCreativeHead;
+}
+body .worksAndCreative .worksAndCreativeInside .creativeDesc {
+  grid-area: creativeDesc;
+}
+body .worksAndCreative .worksAndCreativeInside .worksDesc,
+body .worksAndCreative .worksAndCreativeInside .creativeDesc,
+body .worksAndCreative .worksAndCreativeInside .heartTreatmentText,
+body .worksAndCreative .worksAndCreativeInside .worksDataText {
+  font-family: "Open Sans Regular", sans-serif;
+  color: #6a6a6a;
+  font-size: 16px;
+  line-height: 32px;
+}
+body .worksAndCreative .worksAndCreativeInside .worksUnit1,
+body .worksAndCreative .worksAndCreativeInside .worksUnit2 {
+  width: 334px;
+  height: 210px;
+}
+body .worksAndCreative .worksAndCreativeInside .worksUnit1 {
+  background: url(../images/works1.jpg) no-repeat center center;
+  background-size: 100%;
+  grid-area: worksUnit1;
+}
+body .worksAndCreative .worksAndCreativeInside .worksUnit2 {
+  background: url(../images/works2.jpg) no-repeat center center;
+  background-size: 100%;
+  grid-area: worksUnit2;
+}
+body .worksAndCreative .worksAndCreativeInside .heartTreatment {
+  grid-area: heartTreatment;
+}
+body .worksAndCreative .worksAndCreativeInside .heartTreatment .heartTreatmentHead {
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Montserrat Medium", sans-serif;
+  border-radius: 30px;
+  padding-left: 60px;
+  box-sizing: border-box;
+  background: url(../images/heartPoint.png) no-repeat 10px center, #0087be;
+}
+body .worksAndCreative .worksAndCreativeInside .worksData1 {
+  grid-area: worksData1;
+}
+body .worksAndCreative .worksAndCreativeInside .worksData2 {
+  grid-area: worksData2;
+}
+body .worksAndCreative .worksAndCreativeInside .worksData .worksDataHead {
+  font-family: "Montserrat Medium", sans-serif;
+  color: #474747;
+  font-size: 20px;
+}
+body .worksAndCreative .worksAndCreativeInside .worksData .worksDataDate {
+  font-family: "Montserrat Medium", sans-serif;
+  color: #0087be;
+  font-size: 15px;
+}
+body .worksAndCreative .worksAndCreativeInside .heartTreatmentPoints {
+  grid-area: heartTreatmentPoints;
+}
+body .worksAndCreative .worksAndCreativeInside .heartTreatmentPoints .treatmentPoint {
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
+  color: #474747;
+  font-size: 20px;
+  font-family: "Montserrat Medium", sans-serif;
+  border-radius: 30px;
+  padding-left: 60px;
+  box-sizing: border-box;
+  background: url(../images/heartPoint.png) no-repeat 10px center, #e2e2e2;
+  margin-bottom: 12px;
+}
+body .worksAndCreative .worksAndCreativeInside .readMoreWrap {
+  grid-area: readMoreWrap;
+  text-align: center;
+}
+body .worksAndCreative .worksAndCreativeInside .readMoreWrap button {
+  background-color: #1a9bdc;
+  box-shadow: -4px 11px 40px 0 rgba(0, 1, 1, 0.2);
+  width: 166px;
+  height: 47px;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 18.25px;
+}
+body .worksAndCreative .worksAndCreativeInside .readMoreWrap button:hover {
+  background-color: #37c3a8;
   cursor: pointer;
-  outline: none;
 }
-@media all and (min-width: 0) and (max-width: 767px) {
-  footer .contactsContent .contactsList {
-    margin-top: 15px;
-  }
+body .gallery {
+  width: calc(100% + 40px);
+  float: left;
+  margin-left: -20px;
+  margin-right: -20px;
+  background: url(../images/galleryBack.jpg) no-repeat center center;
+  background-size: cover;
+  margin-top: 100px;
+  text-align: center;
+  padding: 90px 0;
 }
-footer .contactsContent .contactsList > div:not(.socialIcons) {
+body .gallery .galleryHead {
+  font-family: "Montserrat Bold", sans-serif;
+  color: #ffffff;
+  font-size: 45px;
+  margin-bottom: 38px;
+}
+body .gallery .galleryDesc {
+  font-family: "Open Sans Regular", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 32px;
+  margin-bottom: 54px;
+  padding: 0 20px;
+}
+body .gallery .galleryInside {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 37px;
+  grid-column-gap: 34px;
+  justify-items: center;
+}
+body .ourTeam {
+  width: 100%;
+  float: left;
+  text-align: center;
+  padding: 100px 0;
+}
+body .ourTeam .ourTeamHead {
+  font-family: "Montserrat Bold", sans-serif;
+  color: #474747;
+  margin-bottom: 49px;
+  font-size: 45px;
+}
+body .ourTeam .ourTeamDesc {
+  font-family: "Open Sans Regular", sans-serif;
+  color: #6a6a6a;
+  font-size: 16px;
+  line-height: 32px;
+  margin-bottom: 84px;
+}
+body .ourTeam .ourTeamInside {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+body .ourTeam .ourTeamInside .teamUnit .teamName {
+  font-family: "Montserrat Medium", sans-serif;
+  color: #6a6a6a;
+  font-size: 25px;
+  margin-top: 29px;
   margin-bottom: 15px;
 }
-footer .contactsContent .contactsList .skype,
-footer .contactsContent .contactsList .icq,
-footer .contactsContent .contactsList .email,
-footer .contactsContent .contactsList .phone {
-  padding-left: 30px;
+body .ourTeam .ourTeamInside .teamUnit .position {
+  margin-bottom: 32px;
+  font-family: "Montserrat Medium", sans-serif;
+  color: #6a6a6a;
+  font-size: 18px;
+}
+body .ourTeam .ourTeamInside .teamUnit .teamSocials a {
+  font-size: 25px;
+  color: #0087be;
+  text-decoration: none;
+  margin: 0 5px;
+}
+body .specialOffer {
+  width: calc(100% + 40px);
+  float: left;
+  margin-left: -20px;
+  margin-right: -20px;
+  background: #e2e2e2;
+  padding: 68px 0;
+}
+body .specialOffer .specialOfferInside {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+body .specialOffer .specialOfferInside .specialOfferText {
+  font-family: "Montserrat Bold", sans-serif;
+  color: #6c6c6c;
+  font-size: 30px;
+}
+body .specialOffer .specialOfferInside button {
+  background-color: #1a9bdc;
+  box-shadow: -4px 11px 40px 0 rgba(0, 1, 1, 0.2);
+  width: 166px;
+  height: 47px;
+  border: none;
+  border-radius: 30px;
   color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px;
+  text-transform: uppercase;
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 18.25px;
 }
-footer .contactsContent .contactsList .skype {
-  background: url("../images/skype_icon.png") no-repeat left center;
-}
-footer .contactsContent .contactsList .icq {
-  background: url("../images/icq_icon.png") no-repeat left center;
-}
-footer .contactsContent .contactsList .email {
-  background: url("../images/email_icon.png") no-repeat left center;
-}
-footer .contactsContent .contactsList .phone {
-  background: url("../images/phone_icon.png") no-repeat left center;
-}
-footer .contactsContent .contactsList .socialIcons {
-  font-family: SocialIco, sans-serif;
-  color: #ffffff;
-  font-size: 60px;
-  line-height: 44px;
+body .specialOffer .specialOfferInside button:hover {
+  background-color: #37c3a8;
   cursor: pointer;
 }
-.copy {
-  height: 26px;
+body footer {
+  width: calc(100% + 40px);
+  float: left;
+  margin-left: -20px;
+  margin-right: -20px;
+  background: #171717;
+}
+body footer .footerInside {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: #6c6c6c;
+  font-size: 16px;
+  font-family: "Open Sans Regular", sans-serif;
+  grid-template-areas: "getInTouch quickLinks ourServices enquiryForm";
+}
+body footer .footerInside .getInTouch {
+  grid-area: getInTouch;
+  justify-self: center;
+}
+body footer .footerInside .footerHeader {
+  font-family: "Open Sans Bold", sans-serif;
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 65px;
+}
+body footer .footerInside .guickLinks {
+  grid-area: quickLinks;
+  justify-self: center;
+}
+body footer .footerInside .ourServices {
+  grid-area: ourServices;
+  justify-self: center;
+}
+body footer .footerInside .getInTouchContacts .inTouchMails {
+  background: url(../images/inTouchMail.png) no-repeat left center;
+  padding-left: 80px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+body footer .footerInside .getInTouchContacts .inTouchPhones {
+  background: url(../images/inTouchPhone.png) no-repeat 7px center;
+  padding-left: 80px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+body footer .footerInside .getInTouchContacts .inTouchLocation {
+  background: url(../images/inTouchLocation.png) no-repeat 3px center;
+  padding-left: 80px;
+  box-sizing: border-box;
+}
+body footer .footerInside .footerLinksWrap a {
+  display: block;
+  color: inherit;
+  margin-bottom: 27px;
+  text-decoration: none;
+  background: url(../images/arrow.png) no-repeat left center;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+body footer .footerInside .footerLinksWrap a:hover {
+  color: #ffffff;
+}
+body footer .footerInside .enquiryForm {
+  font-size: 14px;
+  font-family: "Open Sans Regular", sans-serif;
+  width: 231px;
+  justify-self: center;
+  grid-area: enquiryForm;
+}
+body footer .footerInside .enquiryForm textarea {
+  font-family: inherit;
+  height: 100px;
+}
+body footer .footerInside .enquiryForm input[type="text"],
+body footer .footerInside .enquiryForm textarea {
+  color: #ffffff;
+  outline: none;
+  border: 0;
+  margin-bottom: 10px;
+  background: transparent;
+  width: 231px;
+  border-bottom: 1px solid rgba(194, 194, 194, 0.42);
+}
+body footer .footerInside .enquiryForm input[type="submit"] {
+  background-color: #1a9bdc;
+  box-shadow: -4px 11px 40px 0 rgba(0, 1, 1, 0.2);
+  width: 166px;
+  height: 47px;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 18.25px;
+}
+body footer .footerInside .enquiryForm input[type="submit"]:hover {
+  background-color: #37c3a8;
+  cursor: pointer;
+}
+body .copyrights {
+  width: calc(100% + 40px);
+  float: left;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 50px 0;
+  box-sizing: border-box;
+  color: #6c6c6c;
+  font-size: 13px;
+  font-family: "Open Sans Regular", sans-serif;
   text-align: center;
-  color: #445161;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.3px;
-  line-height: 26px;
-  background: #f5f5f5;
+  background: #1a1a1a;
 }
